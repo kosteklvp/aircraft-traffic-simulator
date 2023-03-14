@@ -14,14 +14,15 @@ import javax.swing.JLabel;
 public class Grafika extends JFrame {
 
 	public Grafika() throws IOException {
-		//t³o
-		setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:\\Users\\Piotrek\\OneDrive\\Dokumenty\\Workspace_eclipse\\Samoloty\\radar2.jpg")))));
+		//tï¿½o
+	    setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File(".\\.\\resources\\radar2.jpg")))));
 		//ustawienia aplikacji
-		setSize(832, 732);
-		setTitle("Samoloty");
+	    setSize(836, 740);
+	    setTitle("Aircraft traffic simulator");
 		setResizable(false);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 
 		//tworzenie miast w aplikacji
 		JLabel[] label = new JLabel[10];

@@ -24,7 +24,7 @@ public class Watek extends Thread {
 
 		// generowanie samolotu
 		samolot = new Samolot(index);
-		System.out.println("Wygenerowano samolot numer " + samolot.idSamolotu + " w mieœcie "
+		System.out.println("Plane #" + samolot.idSamolotu + " has been generated in city "
 				+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa);
 
 		try {
@@ -38,7 +38,7 @@ public class Watek extends Thread {
 
 			// generowanie miasta nastepnego
 			samolot.idMiastaNastepne = Samolot.generujMiastoNastepne(samolot.idMiastaObecne);
-			System.out.println("Wygenerowano miasto nastepne dla samolot numer " + samolot.idSamolotu + ": "
+			System.out.println("Next city generated for plane #" + samolot.idSamolotu + ": "
 					+ Miasto.miasto[samolot.idMiastaNastepne - 1].nazwa);
 
 			try {
@@ -76,9 +76,9 @@ public class Watek extends Thread {
 			odlXS = odlX;
 			odlYS = odlY;
 
-			System.out.println("Odleg³oœæ dla samolot numer " + samolot.idSamolotu + " z miasta "
-					+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa + " do miasta "
-					+ Miasto.miasto[samolot.idMiastaNastepne - 1].nazwa + " wynosi: " + odleglosc);
+			System.out.println("The distance for airplane #" + samolot.idSamolotu + " from "
+					+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa + " to "
+					+ Miasto.miasto[samolot.idMiastaNastepne - 1].nazwa + " is : " + odleglosc);
 
 			try {
 				Thread.sleep(SLEEP);
@@ -98,7 +98,7 @@ public class Watek extends Thread {
 				else
 					zbiornik = zbiornik + TANK;
 
-				System.out.println("Samolot numer " + samolot.idSamolotu + " zosta³ zatankowany do " + zbiornik + "/"
+				System.out.println("Airplane #" + samolot.idSamolotu + " has been refueled to " + zbiornik + "/"
 						+ samolot.zbiornik);
 
 				try {
@@ -113,11 +113,11 @@ public class Watek extends Thread {
 			// koniec tankowania
 			samolot.samolotG.setText(" " + String.valueOf(samolot.idSamolotu - 1) + "*");
 			// wypisanie zbiornika
-			System.out.println("Samolot numer " + samolot.idSamolotu + " zosta³ zatankowany do pe³na");
+			System.out.println("Airplane #" + samolot.idSamolotu + " has been fully fueled.");
 
 			// wypisanie startowanie + skad dokad
-			System.out.println("Samolot numer " + samolot.idSamolotu + " wystartowal z "
-					+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa + " do "
+			System.out.println("Airplane #" + samolot.idSamolotu + " has aired from "
+					+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa + " to "
 					+ Miasto.miasto[samolot.idMiastaNastepne - 1].nazwa);
 
 			// usuniecie samolotu z maista
@@ -127,7 +127,7 @@ public class Watek extends Thread {
 			while (odleglosc >= 0) {
 
 				// wypisanie ile zostalo
-				System.out.println("Samolotowi numer " + samolot.idSamolotu + " zostalo do pokonania " + odleglosc);
+				System.out.println("Airplane #" + samolot.idSamolotu + " has to go " + odleglosc);
 
 				try {
 					Thread.sleep(SLEEP);
@@ -259,15 +259,15 @@ public class Watek extends Thread {
 
 			// dolecial, dodawanie samlotu do miasta, zamiana na nowe miasto
 			if (samolot.czyZywy == true) {
-				System.out.println("Samolot numer " + samolot.idSamolotu + " dolecial z "
-						+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa + " do "
+				System.out.println("Airplane #" + samolot.idSamolotu + " has arrived from "
+						+ Miasto.miasto[samolot.idMiastaObecne - 1].nazwa + " to "
 						+ Miasto.miasto[samolot.idMiastaNastepne - 1].nazwa);
 				samolot.idMiastaObecne = samolot.idMiastaNastepne;
 				Miasto.miasto[samolot.idMiastaObecne - 1].czySamolot = true;
 
 				// samolot nie dolecial
 			} else {
-				System.out.println("Samolot nie dolecial :(");
+				System.out.println("Airplane has not make it :(");
 				samolot.samolotG.setText("!" + String.valueOf(samolot.idSamolotu - 1) + "*");
 			}
 		}

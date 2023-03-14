@@ -18,7 +18,7 @@ public class Miasto {
 	public boolean czySamolot;
 	
 	// tablica dostepnych miast
-	public static String dostepneMiasta[] = { "Sulechów", "Buków", "Klêpsk", "Krê¿o³y", "Kije", "Kalsk", "Niekarzyn", "Cibórz", "Kêpsko", "Brzezie" };
+	public static String dostepneMiasta[] = { "New York", "Chicago", "Tokio", "Warszawa", "Paris", "London", "Rio", "Sydney", "Dubai", "Berlin" };
 	
 
 //////////////////////////////////////////////////konstruktor////tostring//////////////////////////////////////////////////////
@@ -32,7 +32,7 @@ public class Miasto {
 
 	// tostring
 	public String toString() {
-		return "Miasto [nazwa=" + nazwa + ", idMiasta=" + idMiasta + ", osX=" + osX + ", osY=" + osY + "]";
+		return "City [nazwa=" + nazwa + ", idMiasta=" + idMiasta + ", osX=" + osX + ", osY=" + osY + "]";
 	}
 	
 //////////////////////////////////////////////////metody///////////////////////////////////////////////////////

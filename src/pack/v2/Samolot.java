@@ -45,7 +45,7 @@ public class Samolot extends JFrame {
 
 	//tostring
 	public String toString() {
-		return "Samolot [zbiornik=" + zbiornik + ", miastoStartowe=" + Miasto.miasto[idMiastaObecne - 1].nazwa + "]";
+		return "Airplane [zbiornik=" + zbiornik + ", miastoStartowe=" + Miasto.miasto[idMiastaObecne - 1].nazwa + "]";
 	}
 
 ////////////////////////////////////////////metody///////////////////////////////////////////////////////////////////
