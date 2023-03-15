@@ -5,9 +5,9 @@ This is an application for simulating airtraffic between cities. The locations o
 ## Launching
 
 
-Download executable jar file from **Releases** section and run it. It requires Java 8.It can be run in CLI as well as GUI.
+Download executable jar file from **Releases** section and run it. It requires Java 8. It can be run in CLI as well as GUI.
 
-Command to run it from command line.
+Command to run it additionally with CLI.
 
     java -jar aircraft-traffic-simulator-2.0.jar
 
